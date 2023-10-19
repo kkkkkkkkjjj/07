@@ -1,14 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int x=123;
+void sub(void);
 
-void sub1(void)
+int main(void)
 {
-    x = 456;
+    int i;
+    for (i=0; i<3; i++)
+    sub();
+    return 0;
 }
 
-void sub2(void)
+void sub(void)
 {
-    x = 789;
+    int auto_count = 0;
+    static int static_count =0;
+    auto_count++;
+    static_count++;
+    printf("auto_count=%d\n", auto_count);
+    printf("static_count=%d\n", static_count);
 }
