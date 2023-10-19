@@ -1,17 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int inc(int counter)
+int x=123;
+
+void sub1(void)
 {
-    counter++;
-    return counter;
+    x = 456;
 }
 
-int main(void)
+void sub2(void)
 {
-    int i;
-    printf("함수 호출전 i = %d\n", i);
-    inc(i);
-    printf("함수 호출후 i = %d\n", i);
-    return 0;
+    x = 789;
 }
